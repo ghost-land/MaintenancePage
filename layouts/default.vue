@@ -8,16 +8,6 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer padless>
     <v-card
       flat
@@ -38,15 +28,6 @@
         </v-btn>
         <v-btn class="mx-4 white--text" href="https://github.com/ghost-land" icon>
           <v-icon size="24px"> mdi-github </v-icon>
-        </v-btn>
-        <v-btn class="mx-4 white--text" href="https://raw.githubusercontent.com/ghost-land/ghost-land.github.io/main/ghosteshop.json" icon>
-          <v-icon size="24px"> mdi-code-json </v-icon>
-        </v-btn>
-        <v-btn class="mx-4 white--text" href="https://ghosteshop.com/feed/news.xml" icon>
-          <v-icon size="24px"> mdi-rss </v-icon>
-        </v-btn>
-        <v-btn class="mx-4 white--text" href="https://wiki.ghosteshop.com/" icon>
-          <v-icon size="24px"> mdi-book-open-page-variant </v-icon>
         </v-btn>
       </v-card-text>
     </v-card>
