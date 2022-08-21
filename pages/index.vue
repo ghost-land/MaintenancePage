@@ -10,7 +10,7 @@
         </v-card-title>
         <v-card-text>
           <p>
-            With the various attacks we have experienced, we have decided to reconfigure our systems to improve stability and resistance to these attacks. We will come back soon, sorry for the inconvenience.
+            We have chosen to put our server in maintenance. Learn more on our discord server.
           </p>
         </v-card-text>
         <v-card-actions>
