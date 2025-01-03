@@ -3,7 +3,7 @@
     <v-col cols="12" sm="8" md="6">
       <v-card class="logo py-6 d-flex justify-center">
         <v-img
-          src="favicon.ico"
+          src="favicon.png"
           class="d-flex justify-center"
           max-width="128px"
         />
