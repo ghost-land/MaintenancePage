@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'Ghost eShop Maintenance',
-    title: 'Ghost eShop Maintenance',
+    titleTemplate: 'Ghost Land Maintenance',
+    title: 'Ghost Land Maintenance',
     htmlAttrs: {
       lang: 'en',
     },
@@ -39,15 +39,44 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    'nuxt-i18n'
+  ],
+
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.js' },
+      { code: 'fr', iso: 'fr-FR', name: 'Français', file: 'fr.js' },
+      { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.js' },
+      { code: 'de', iso: 'de-DE', name: 'Deutsch', file: 'de.js' },
+      { code: 'ja', iso: 'ja-JP', name: '日本語', file: 'ja.js' },
+      { code: 'pt', iso: 'pt-PT', name: 'Português', file: 'pt.js' },
+      { code: 'ko', iso: 'ko-KR', name: '한국어', file: 'ko.js' }
+    ],
+    defaultLocale: 'en',
+    langDir: 'locales/',
+    strategy: 'no_prefix',
+    vueI18n: {
+      fallbackLocale: 'en'
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
+          primary: colors.blue.darken2,
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+        },
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,

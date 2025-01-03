@@ -1,4 +1,18 @@
-# gemaintenance
+# Ghost Land Maintenance
+
+A multilingual maintenance page for Ghost Land services built with Nuxt.js and Vuetify.
+
+![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+
+## Features
+
+- 🌍 Internationalization (i18n) support with 7 languages
+- 🌓 Automatic dark/light theme based on system preference
+- 📊 Real-time maintenance progress indicator
+- 📱 Fully responsive Material Design
+- ⚡ Dynamic configuration for maintenance periods
+- 🔗 Centralized link management
 
 ## Build Setup
 
@@ -17,52 +31,76 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Project Structure
 
-## Special Directories
+```
+├── assets/            # Uncompiled assets
+├── components/        # Vue components
+├── config/           
+│   ├── links.js      # Social and external links
+│   └── maintenance.js # Maintenance configuration
+├── layouts/          
+│   └── default.vue   # Default layout with theme toggle
+├── locales/          # Translation files
+│   ├── en.js         # English
+│   ├── fr.js         # French
+│   ├── es.js         # Spanish
+│   ├── de.js         # German
+│   ├── ja.js         # Japanese
+│   ├── pt.js         # Portuguese
+│   └── ko.js         # Korean
+├── pages/            
+│   └── index.vue     # Main maintenance page
+└── static/           # Static files
+    └── favicon.ico   # Site favicon
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## Configuration
 
-### `assets`
+### Maintenance Period
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+Configure maintenance dates in `config/maintenance.js`:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```js
+export default {
+  startDate: '2024-01-15T00:00:00Z',
+  endDate: '2024-01-20T00:00:00Z'
+}
+```
 
-### `components`
+### External Links
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Manage all external links in `config/links.js`:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+```js
+export default {
+  social: {
+    status: 'https://status.ghostland.at/',
+    community: 'https://social.ghostland.at/',
+    wiki: 'https://wiki.ghosteshop.com/',
+    donate: 'https://ko-fi.com/ghostland'
+  }
+}
+```
 
-### `layouts`
+## Features
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+### Theme Switching
+- Automatically detects system theme preference
+- Manual toggle with persistent preference
+- Smooth transitions between themes
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+### Internationalization
+- Supports 7 languages out of the box
+- Easy language switching via toolbar
+- Locale-aware date formatting
 
-### `pages`
+### Progress Indicator
+- Real-time maintenance progress tracking
+- Automatic updates
+- Visual progress bar with percentage
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+## License
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+This project is licensed under the **GNU General Public License v3.0**.   
+Copyright © 2020-2025 Ghost Land Team
