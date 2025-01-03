@@ -19,14 +19,14 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          if [ ! -f package-lock.json ]; then
-            echo "package-lock.json not found, running npm install to create it..."
-            npm install
+          if [ ! -f yarn.lock ]; then
+            echo "yarn.lock not found, running yarn install to create it..."
+            yarn install
           else
-            echo "package-lock.json found, running npm ci..."
-            npm ci
+            echo "yarn.lock found, running yarn install..."
+            yarn install
           fi
-          npm run build
+          yarn generate
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
