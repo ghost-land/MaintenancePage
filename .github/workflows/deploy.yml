@@ -19,7 +19,13 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          npm ci
+          if [ ! -f package-lock.json ]; then
+            echo "package-lock.json not found, running npm install to create it..."
+            npm install
+          else
+            echo "package-lock.json found, running npm ci..."
+            npm ci
+          fi
           npm run build
 
       - name: Deploy to GitHub Pages
