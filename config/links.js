@@ -3,6 +3,6 @@ export default {
     status: 'https://status.ghostland.at/',
     community: 'https://social.ghostland.at/',
     wiki: 'https://wiki.ghosteshop.com/',
-    donate: 'https://boosty.to/ghostland'
+    donate: 'https://donate.ghostland.at'
   }
 }
